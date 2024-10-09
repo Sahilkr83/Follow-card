@@ -119,6 +119,7 @@ body{
     scale: 0;
     color: white;
     z-index: 1;
+
 }
 .active{
     scale: 1;
@@ -209,6 +210,20 @@ body{
 @media (max-width:850px){
     .module{
         width: 70vw;
+    }
+    h1{
+        font-size:20px ;
+     }
+
+}
+@media(max-width:471px){
+    .module{
+        height: 300px;
+    }
+}
+@media(max-width:382px){
+    .module{
+        height: 370px;
     }
 }
 .overlay {
