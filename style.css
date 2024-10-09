@@ -1,0 +1,228 @@
+*{
+    box-sizing: 0;
+    padding:0 ;
+    margin: 0;
+}
+body{
+    background-color: black;
+}
+.wrapper{
+
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.cir-1{
+    position: absolute;
+    border-radius: 100%;
+    top: 5%;
+    left: 30%;
+    width: 13em;
+    height: 13em;
+    box-shadow: 0 0 50px #d84869;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    animation: float1 8s  infinite ;
+}
+.cir-2{
+    position: absolute;
+    width: 19em;
+    height: 19em;
+    bottom: 5%;
+    right: 30%;
+    border-radius: 100%;
+    box-shadow: 0 0 50px #5648d8;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    animation: float2 8s  infinite ;
+}
+@keyframes float1 {
+    50% {
+        left: 33%;
+        top: 4%;
+        scale: 1.11;
+      }
+      
+}
+@keyframes float2 {
+    50% {
+      bottom: 6%;
+      right: 31%;
+    }
+}
+ h1{
+    color: white;
+ }
+ .para{
+    color: white;
+    opacity: 60%;
+ }
+.card{
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    position: absolute;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 450px;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    border: 2px solid white;
+    background: #ffffff1a;
+    border-radius: 15px;
+}
+.btns{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.btn{
+   background: #ffffff00;
+   color: white;
+   padding: 9px 12px;
+   border: 2px solid #ffffffb9;
+   text-transform: capitalize;
+   border-radius: 4px;
+   cursor: pointer;
+   width: 150px;
+   transition: background 0.25s ease-in , color 0.25s ease-in;
+}
+.btn1{
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.btn:hover{
+    background: #ffffffb9;
+    color: #131313;
+    z-index: 1;
+}
+
+.icon-container-i{
+    height: 143px;
+}
+.module{
+    position: fixed;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 20px 25px;
+    border: 2px solid #ffffff59;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    background: #00000088;
+    scale: 0;
+    color: white;
+    z-index: 1;
+}
+.active{
+    scale: 1;
+}
+.module-heading{
+    display: flex;
+    margin-bottom: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ffffff88;
+}
+
+.icon-container{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.icon{
+    border: 1px solid #ffffff88;
+    padding: 17px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+    gap: 10px;
+    justify-content: center;
+    transition: all 0.5s;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+.icon i {
+    font-size: 27px;
+  }
+
+#facebook{
+    color: #1771e6;
+    border: 1px solid #1771e6;
+}
+#facebook:hover{
+    background-color: #1771e6;
+    color: white;
+    border: 1px solid #1771e6;
+}
+#twitter {
+    color: #1c99e6;
+    border: 1px solid #1c99e6;
+}
+#twitter:hover {
+    background-color:#1c99e6 ;
+    color:white ;
+    border: 1px solid #1c99e6;
+}
+#instagram {
+    color: #cb2770;
+    border: 1px solid #cb2770;
+    
+}
+#instagram:hover {
+    background-color: #cb2770;
+    color: white;
+    border: 1px solid #cb2770;
+}
+#whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+}
+#whatsapp:hover {
+    background-color:#2fe664 ;
+    color:white ;
+    border: 1px solid #2fe664;
+}
+#telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+}
+#telegram:hover {
+    background-color: #0081c2;
+    color:white ;
+    border: 1px solid #0081c2;
+}
+@media (max-width:850px){
+    .module{
+        width: 70vw;
+    }
+}
+.overlay {
+    position: fixed;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+}
+.overlayactive {
+    opacity: 1;
+    pointer-events: initial;
+}
